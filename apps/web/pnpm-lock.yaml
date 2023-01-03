@@ -1,41 +1,32 @@
 lockfileVersion: 5.4
 
-importers:
+specifiers:
+  '@solidjs/meta': ^0.28.0
+  '@solidjs/router': ^0.6.0
+  '@types/node': ^18.11.9
+  esbuild: ^0.14.54
+  postcss: ^8.4.18
+  solid-js: ^1.6.2
+  solid-start: ^0.2.0
+  solid-start-node: ^0.2.0
+  typescript: ^4.8.4
+  undici: ^5.11.0
+  vite: ^3.1.8
 
-  .:
-    specifiers:
-      prettier: latest
-      turbo: latest
-    devDependencies:
-      prettier: 2.8.1
-      turbo: 1.6.3
+dependencies:
+  '@solidjs/meta': 0.28.2_solid-js@1.6.6
+  '@solidjs/router': 0.6.0_solid-js@1.6.6
+  solid-js: 1.6.6
+  solid-start: 0.2.10_7g4juq64zsg2futgalxovnqs54
+  undici: 5.14.0
 
-  apps/web:
-    specifiers:
-      '@solidjs/meta': ^0.28.0
-      '@solidjs/router': ^0.6.0
-      '@types/node': ^18.11.9
-      esbuild: ^0.14.54
-      postcss: ^8.4.18
-      solid-js: ^1.6.2
-      solid-start: ^0.2.0
-      solid-start-node: ^0.2.0
-      typescript: ^4.8.4
-      undici: ^5.11.0
-      vite: ^3.1.8
-    dependencies:
-      '@solidjs/meta': 0.28.2_solid-js@1.6.6
-      '@solidjs/router': 0.6.0_solid-js@1.6.6
-      solid-js: 1.6.6
-      solid-start: 0.2.10_7g4juq64zsg2futgalxovnqs54
-      undici: 5.14.0
-    devDependencies:
-      '@types/node': 18.11.18
-      esbuild: 0.14.54
-      postcss: 8.4.20
-      solid-start-node: 0.2.10_a5zcxqmafkmbyzfc7kn6l2o4cu
-      typescript: 4.9.4
-      vite: 3.2.5_@types+node@18.11.18
+devDependencies:
+  '@types/node': 18.11.18
+  esbuild: 0.14.54
+  postcss: 8.4.20
+  solid-start-node: 0.2.10_a5zcxqmafkmbyzfc7kn6l2o4cu
+  typescript: 4.9.4
+  vite: 3.2.5_@types+node@18.11.18
 
 packages:
 
@@ -2426,12 +2417,6 @@ packages:
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
-  /prettier/2.8.1:
-    resolution: {integrity: sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==}
-    engines: {node: '>=10.13.0'}
-    hasBin: true
-    dev: true
-
   /pretty-bytes/6.0.0:
     resolution: {integrity: sha512-6UqkYefdogmzqAZWzJ7laYeJnaXDy2/J+ZqiiMtS7t7OfpXWTlaeGMwX8U6EFvPV/YWWEKRkS8hKS4k60WHTOg==}
     engines: {node: ^14.13.1 || >=16.0.0}
@@ -2742,67 +2727,6 @@ packages:
 
   /tslib/2.4.1:
     resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
-
-  /turbo-darwin-64/1.6.3:
-    resolution: {integrity: sha512-QmDIX0Yh1wYQl0bUS0gGWwNxpJwrzZU2GIAYt3aOKoirWA2ecnyb3R6ludcS1znfNV2MfunP+l8E3ncxUHwtjA==}
-    cpu: [x64]
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /turbo-darwin-arm64/1.6.3:
-    resolution: {integrity: sha512-75DXhFpwE7CinBbtxTxH08EcWrxYSPFow3NaeFwsG8aymkWXF+U2aukYHJA6I12n9/dGqf7yRXzkF0S/9UtdyQ==}
-    cpu: [arm64]
-    os: [darwin]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /turbo-linux-64/1.6.3:
-    resolution: {integrity: sha512-O9uc6J0yoRPWdPg9THRQi69K6E2iZ98cRHNvus05lZbcPzZTxJYkYGb5iagCmCW/pq6fL4T4oLWAd6evg2LGQA==}
-    cpu: [x64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /turbo-linux-arm64/1.6.3:
-    resolution: {integrity: sha512-dCy667qqEtZIhulsRTe8hhWQNCJO0i20uHXv7KjLHuFZGCeMbWxB8rsneRoY+blf8+QNqGuXQJxak7ayjHLxiA==}
-    cpu: [arm64]
-    os: [linux]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /turbo-windows-64/1.6.3:
-    resolution: {integrity: sha512-lKRqwL3mrVF09b9KySSaOwetehmGknV9EcQTF7d2dxngGYYX1WXoQLjFP9YYH8ZV07oPm+RUOAKSCQuDuMNhiA==}
-    cpu: [x64]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /turbo-windows-arm64/1.6.3:
-    resolution: {integrity: sha512-BXY1sDPEA1DgPwuENvDCD8B7Hb0toscjus941WpL8CVd10hg9pk/MWn9CNgwDO5Q9ks0mw+liDv2EMnleEjeNA==}
-    cpu: [arm64]
-    os: [win32]
-    requiresBuild: true
-    dev: true
-    optional: true
-
-  /turbo/1.6.3:
-    resolution: {integrity: sha512-FtfhJLmEEtHveGxW4Ye/QuY85AnZ2ZNVgkTBswoap7UMHB1+oI4diHPNyqrQLG4K1UFtCkjOlVoLsllUh/9QRw==}
-    hasBin: true
-    requiresBuild: true
-    optionalDependencies:
-      turbo-darwin-64: 1.6.3
-      turbo-darwin-arm64: 1.6.3
-      turbo-linux-64: 1.6.3
-      turbo-linux-arm64: 1.6.3
-      turbo-windows-64: 1.6.3
-      turbo-windows-arm64: 1.6.3
-    dev: true
 
   /typescript/4.9.4:
     resolution: {integrity: sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==}

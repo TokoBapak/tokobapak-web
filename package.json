@@ -1,27 +1,24 @@
 {
   "name": "tokobapak-web",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "solid-start dev",
-    "build": "solid-start build",
-    "start": "solid-start start"
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
-  "type": "module",
   "devDependencies": {
-    "@types/node": "^18.11.9",
-    "esbuild": "^0.14.54",
-    "postcss": "^8.4.18",
-    "solid-start-node": "^0.2.0",
-    "typescript": "^4.8.4",
-    "vite": "^3.1.8"
-  },
-  "dependencies": {
-    "@solidjs/meta": "^0.28.0",
-    "@solidjs/router": "^0.6.0",
-    "solid-js": "^1.6.2",
-    "solid-start": "^0.2.0",
-    "undici": "^5.11.0"
+    "prettier": "latest",
+    "turbo": "latest"
   },
   "engines": {
-    "node": ">=16.8"
-  }
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "packageManager": "pnpm@7.21.0"
 }
