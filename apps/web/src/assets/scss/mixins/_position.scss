@@ -1,0 +1,12 @@
+@mixin center-content($horizontal: true, $vertical: true) {
+    display: flex;
+
+    @if($horizontal) {
+        justify-content: center;
+    }
+
+    @if($vertical) {
+        align-items: center;
+    }
+
+}

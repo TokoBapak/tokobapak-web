@@ -1,0 +1,80 @@
+/* Use a more intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove all margins & padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Prevent mobile browsers increasing font-size */
+html {
+    -moz-text-size-adjust: none;
+    font-family: $font-family;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Allow percentage-based heights */
+/* Setting width: 100% isn't required because it is a default for block-level elements (html & body are block level) */
+html,
+body {
+    height: 100%;
+    color: $body-color;
+    background: $body-bg;
+}
+
+body {
+    /* Prevent the rubber band scroll effect when the user hits the top or bottom of the document */
+    overscroll-behavior: none;
+
+    color: black;
+    /* UI controls color (example: range input) */
+    accent-color: black;
+}
+
+/* Remove unintuitive behaviour such as gaps around media elements.  */
+img,
+picture,
+video,
+canvas,
+svg,
+iframe {
+    display: block;
+}
+
+/* Avoid text overflow */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+strong {
+    overflow-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+input {
+    border: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
