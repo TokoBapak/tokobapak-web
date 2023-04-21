@@ -7,19 +7,19 @@
   },
   "type": "module",
   "devDependencies": {
-    "@types/node": "^18.11.9",
-    "esbuild": "^0.14.54",
-    "postcss": "^8.4.18",
-    "solid-start-node": "^0.2.0",
-    "typescript": "^4.8.4",
-    "vite": "^3.1.8"
+    "@types/node": "^18.15.13",
+    "esbuild": "^0.17.17",
+    "postcss": "^8.4.23",
+    "solid-start-node": "^0.2.26",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.1"
   },
   "dependencies": {
-    "@solidjs/meta": "^0.28.0",
-    "@solidjs/router": "^0.6.0",
-    "solid-js": "^1.6.2",
-    "solid-start": "^0.2.0",
-    "undici": "^5.11.0"
+    "@solidjs/meta": "^0.28.4",
+    "@solidjs/router": "^0.8.2",
+    "solid-js": "^1.7.3",
+    "solid-start": "^0.2.26",
+    "undici": "^5.22.0"
   },
   "engines": {
     "node": ">=16.8"
