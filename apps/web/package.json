@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "solid-start dev",
     "build": "solid-start build",
-    "start": "solid-start start"
+    "start": "solid-start start",
+    "format": "prettier --write ./src/**/*.{ts,tsx,css,scss} --ignore-path .gitignore"
   },
   "type": "module",
   "devDependencies": {
@@ -24,6 +25,7 @@
     "@solidjs/router": "^0.8.2",
     "@tanstack/solid-query": "^4.29.1",
     "@ts-rest/solid-query": "^3.19.2",
+    "config": "workspace:^",
     "contracts": "workspace:^",
     "sass": "^1.62.0",
     "solid-js": "^1.7.3",

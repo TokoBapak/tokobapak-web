@@ -1,19 +1,23 @@
 {
-  "name": "contracts",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.ts",
-  "scripts": {
-    "protoc": "npx protoc --plugin=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_opt=onlyTypes=true --ts_proto_opt=lowerCaseServiceMethods=true --ts_proto_out ./stub --proto_path ./proto"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "ts-proto": "^1.146.0"
-  },
-  "dependencies": {
-    "@ts-rest/core": "^3.19.2",
-    "zod": "^3.21.4"
-  }
+	"name": "contracts",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.ts",
+	"scripts": {
+		"format": "prettier --write ./api/**/*.ts --ignore-path .gitignore",
+		"protoc": "npx protoc --plugin=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_opt=onlyTypes=true --ts_proto_opt=lowerCaseServiceMethods=true --ts_proto_out ./stub --proto_path ./proto"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"eslint": "^8.38.0",
+		"prettier": "^2.8.7",
+		"ts-proto": "^1.146.0"
+	},
+	"dependencies": {
+		"@ts-rest/core": "^3.19.2",
+		"config": "workspace:^",
+		"zod": "^3.21.4"
+	}
 }
