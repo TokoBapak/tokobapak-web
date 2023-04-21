@@ -13,6 +13,9 @@ import {
   Title
 } from "solid-start";
 import "./root.css";
+import { QueryClient, QueryClientProvider } from "@tanstack/solid-query";
+
+const queryClient = new QueryClient();
 
 export default function Root() {
   return (
@@ -23,14 +26,16 @@ export default function Root() {
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Body>
-        <Suspense>
-          <ErrorBoundary>
-            <A href="/">Index</A>
-            <Routes>
-              <FileRoutes />
-            </Routes>
-          </ErrorBoundary>
-        </Suspense>
+        <QueryClientProvider client={queryClient}>
+          <Suspense>
+            <ErrorBoundary>
+              <A href="/">Index</A>
+              <Routes>
+                <FileRoutes />
+              </Routes>
+            </ErrorBoundary>
+          </Suspense>
+        </QueryClientProvider>
         <Scripts />
       </Body>
     </Html>

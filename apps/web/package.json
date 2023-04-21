@@ -22,10 +22,14 @@
   "dependencies": {
     "@solidjs/meta": "^0.28.4",
     "@solidjs/router": "^0.8.2",
+    "@tanstack/solid-query": "^4.29.1",
+    "@ts-rest/solid-query": "^3.19.2",
+    "contracts": "workspace:^",
     "sass": "^1.62.0",
     "solid-js": "^1.7.3",
     "solid-start": "^0.2.26",
-    "undici": "^5.22.0"
+    "undici": "^5.22.0",
+    "zod": "^3.21.4"
   },
   "engines": {
     "node": ">=16.8"
