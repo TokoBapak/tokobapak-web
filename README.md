@@ -1,73 +1,41 @@
-# Turborepo starter
+# TokoBapak Web
 
-This is an official pnpm starter turborepo.
+## Overview
 
-## What's inside?
+This is a monorepo for anything related to TokoBapak Website, using turborepo to manage multiple packages within the
+same repository.
+This project includes a submodule for proto files from [tokobapak/proto](https://github.com/TokoBapak/proto)
 
-This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes the following packages/apps:
+## Development
 
-### Apps and Packages
+Since this repo contains submodule, you need to use the `--recursive-submodule` flag when cloning this repository.
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm run build
+```shell
+git clone --recurse-submodules git@github.com:TokoBapak/tokobapak-web
+# or via http
+git clone --recurse-submodules https://github.com/TokoBapak/tokobapak-web
 ```
 
-### Develop
+## Project Directory
 
-To develop all apps and packages, run the following command:
+### apps/web
 
-```
-cd my-turborepo
-pnpm run dev
-```
+This directory contains the project for TokoBapak user-facing website. It is using
+[SolidStart](https://start.solidjs.com/) at its core and [SCSS](https://sass-lang.com/) for styling.
 
-### Remote Caching
+More details can be found on its [README.md](./apps/web/README.md)
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+### packages/config
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+This directory contains any configuration files needed for TokoBapak Website. Every apps should share or derive
+their formatting and linting configuration to provide consistency across projects. 
 
-```
-cd my-turborepo
-pnpm dlx turbo login
-```
+More details can be found on its [README.md](./packages/config/README.md)
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+### packages/contracts
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
+This package provides the API contracts for TokoBapak Website. Any API call should be written
+as [ts-rest](https://github.com/ts-rest/ts-rest)
+invocation that adheres to the generated type from the proto repository.
 
-```
-pnpm dlx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Pipelines](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+More details can be found on its [README.md](./packages/contracts/README.md)
