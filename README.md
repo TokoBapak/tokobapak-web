@@ -35,7 +35,7 @@ More details can be found on its [README.md](./packages/config/README.md)
 ### packages/contracts
 
 This package provides the API contracts for TokoBapak Website. Any API call should be written
-as [ts-rest](https://github.com/ts-rest/ts-rest)
+as [ts-rest](https://ts-rest.com/docs/core)
 invocation that adheres to the generated type from the proto repository.
 
 More details can be found on its [README.md](./packages/contracts/README.md)
